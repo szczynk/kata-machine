@@ -19,12 +19,14 @@ func PreOrderSearchWalk(current *BinaryNode, path []int) []int {
 	return path
 }
 
-//           7             <- root / head
-//         /   \               |
-//       23      3             |
-//     /   \   /   \           |
-//    5    4   18   21     <- leaf
-
+//	Depth First Search / Traversal
+//	using implicit Data Structure -> Stack
+//	       7             <- root / head
+//	     /   \               |
+//	   23      3             |
+//	 /   \   /   \           |
+//	5    4   18   21     <- leaf
+//
 // pre_order_search => [7, 23, 5, 4, 3, 18, 21]
 func PreOrderSearch(head *BinaryNode) []int {
 	return PreOrderSearchWalk(head, []int{})

@@ -17,12 +17,14 @@ function walk(current: BinaryNode<number> | null, path: number[]): number[]{
     return path
 }
 
+//    Depth First Search / Traversal
+//    using implicit Data Structure -> Stack
 //           7             <- root / head
 //         /   \               |
 //       23      3             |
 //     /   \   /   \           |
 //    5    4   18   21     <- leaf
-    
+// 
 //    post_order_search => [5, 23, 4, 7, 18, 3, 21]
 export default function in_order_search(head: BinaryNode<number>): number[] {
     return walk(head, [])
