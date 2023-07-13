@@ -6,14 +6,14 @@ import (
 
 func TestBFS(t *testing.T) {
 	if found := BFS(Tree, 45); !found {
-		t.Errorf("InOrderSearch() = %v, want true", found)
+		t.Errorf("BFS() = %v, want true", found)
 	}
 
 	if found := BFS(Tree, 7); !found {
-		t.Errorf("InOrderSearch() = %v, want true", found)
+		t.Errorf("BFS() = %v, want true", found)
 	}
 
 	if found := BFS(Tree, 69); found {
-		t.Errorf("InOrderSearch() = %v, want false", found)
+		t.Errorf("BFS() = %v, want false", found)
 	}
 }
