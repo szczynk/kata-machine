@@ -4,7 +4,7 @@
 // 
 // implementation of a Trie
 // - autocomplete
-// - cache mechanism (like Folker)
+// - cache mechanism (like Falkor)
 // 
 // for instance, English language spellchecker/autocomplete as a trie
 // with a root that have empty value and
