@@ -1,8 +1,8 @@
 // * graph => series of nodes with some amount of connections around it
 //
-// hardest & largest part of all algo
-// bestest data structure
-// longest problem to how we draw our graph to this day
+// hardest & largest part of all algo,
+// bestest data structure,
+// longest problem to how we draw our graph to this day,
 //
 // e.g. Euler draw a graph to king tour but the city does not supported
 //
@@ -14,7 +14,7 @@
 //   acyclic    : graph that does not contain any cycles
 //   connected  : every node can reach every other node
 //   directed   : When there is a direction to the connections. Think Twitter
-//   undirected : not directed. Think Facebook (i haven't been on in 10 years, it may have changed)
+//   undirected : not directed. Think Facebook (i have not been on in 10 years, it may have changed)
 //   weighted   : the edges have a “weight” or “value” associated with them
 //                (e.g.a traffic map where the same road can have more traffic going
 //                North than South). Think Maps
@@ -62,9 +62,8 @@
 //
 //    become like this,
 //    ```
-//    const AdjacencyMatrix =
+//    const AdjacencyMatrix = // node 0, 1, 2, 3
 //    [
-//        // node 0, 1, 2, 3
 //        [0, 10, 0, 5],  // node 0
 //        [0,  0, 0, 0],  // node 1
 //        [...],  // node 2
@@ -83,12 +82,14 @@
 //
 // to represent path in a graph
 // -> in DFS, we just build our path as we recurse
-//    (pre-recurse -> push, post-recurse -> pop)
+//    pre-recurse    -> we visit the node, and push it to the path,
+//    recurse        -> we go, and recurse
+//    post - recurse -> we pop it from the path
 // -> in BFS, we don't have somethiong to maintain the shape / structure
 //    of our search, so we need to maintain ourself. The best way to do it,
 //    create previous array = [-1,...] and seen array = [true, false, ...]
 //
-// now we are implement BFS on Adjacency Matrix based graph.
+// now we are implement BFS on Adjacency Matrix -ased graph.
 export default function bfs(
     graph: WeightedAdjacencyMatrix,
     source: number,
