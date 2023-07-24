@@ -31,7 +31,7 @@ export default class DoublyLinkedList<T> {
         // creating the node
         const node = { value: item } as Node<T>;
 
-        // if no head, set this node as the head
+        // If the linked list is empty, set this node as both the head and the tail.
         if (!this.head) {
             this.head = this.tail = node;
             return;
@@ -211,6 +211,7 @@ export default class DoublyLinkedList<T> {
             node.next.prev = node.prev
         }
 
+        // the tail and the head checking
         if (node === this.head) {
             this.head = node.next
         }
